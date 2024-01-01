@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  node-minimizer:
+    image: google85/vscode-devcontainer-node:16.12.0
+    hostname: node-devcontainer
+    working_dir: /home/node/app
+    environment:
+      - TZ=Europe/Bucharest
+    volumes:
+      - ..:/home/node/app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    tty: true

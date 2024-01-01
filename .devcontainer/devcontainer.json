@@ -1,0 +1,24 @@
+{
+	"name": "node-minimizer",
+	"dockerComposeFile": "docker-compose.devcontainer.yml",
+	"service": "node-minimizer",
+	"workspaceFolder": "/home/node/app",
+	"mounts": [
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/node/.ssh,type=bind,consistency=cached",
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/root/.ssh,type=bind,consistency=cached",
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/home/node/.gitconfig,type=bind,consistency=cached",
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/root/.gitconfig,type=bind,consistency=cached"
+	],
+
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+            "settings": { 
+            },
+            "extensions": [
+            ]
+        }
+	},
+	"forwardPorts": [
+	]
+}
